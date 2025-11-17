@@ -1,4 +1,4 @@
-# RANDAR-RANGE-USING-SCILAB
+# RADAR-RANGE-USING-SCILAB
 
 ## Aim:
 To calculate the maximum range of a radar system using the Radar Range Equation and verify the results through Scilab programming.
@@ -26,16 +26,16 @@ clc;
 clear;
 clf;
 
-// Given parameters (changed values)
-Gt = 45;          // Transmit antenna gain (was 40)
-Gr = 35;          // Receive antenna gain (was 35)
-l = 0.04;         // Wavelength (was 0.04)
-s =3;          // Radar cross-section (was 3)
-Pm = 5e-11;       // Minimum detectable power (was 1e-10)
-K = (4 * %pi)^3;  // Constant
+// Updated parameters
+Gt = 50;           // Transmit antenna gain
+Gr = 40;           // Receive antenna gain
+l = 0.05;          // Wavelength
+s = 4;             // Radar cross-section
+Pm = 4e-11;        // Minimum detectable power
+K = (4 * %pi)^3;   // Constant
 
 // ---- Plot 1: Range vs Transmit Power ----
-Pt = 0:0.5:100;               // Transmit power
+Pt = 0:0.5:100;               // Transmit power values
 x = Pt .* Gt .* Gr .* l .* l .* s;
 y = K * Pm;
 z = x ./ y;
@@ -50,7 +50,7 @@ xgrid();
 
 // ---- Plot 2: Range vs Received Power ----
 Pr = 0:10:1000;
-Pt_fixed = 45;                // Fixed transmit power (was 40)
+Pt_fixed = 50;                // Updated fixed transmit power
 x = Pt_fixed .* Gt .* Gr .* l .* l .* s;
 y = K .* Pr;
 z = x ./ y;
@@ -65,8 +65,8 @@ xgrid();
 
 // ---- Plot 3: Range vs Antenna Gain ----
 G = 0:0.06:60;
-Pm_fixed = 5e-11;
-Pt_fixed = 45;
+Pm_fixed = 4e-11;
+Pt_fixed = 50;
 a = Pt_fixed .* G .* l .* l .* s;
 b = K * Pm_fixed;
 c = a ./ b;
@@ -78,14 +78,12 @@ xlabel('Antenna Gain (G)');
 ylabel('Range (m)');
 title('Range vs Antenna Gain');
 xgrid();
-
 ```
 
 ## OUTPUT
-<img width="1692" height="859" alt="image" src="https://github.com/user-attachments/assets/84e0f8a2-405c-47bd-bbb9-97f82a5550d0" />
+![WhatsApp Image 2025-11-15 at 13 58 05_ad9605f2](https://github.com/user-attachments/assets/b198f351-f8e4-4001-b665-651f9ad45c77)
 
 ## MANUAL CALCULATION
-![WhatsApp Image 2025-11-14 at 13 13 49_fdac9c6d](https://github.com/user-attachments/assets/22b2c279-8639-4be8-aacd-cc43c0d7e87b)
 
 ## RESULT
 Thus, the maximum range of a radar system using the Radar Range Equation is verified through a Scilab program.
