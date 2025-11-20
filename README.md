@@ -84,6 +84,7 @@ xgrid();
 ![WhatsApp Image 2025-11-15 at 13 58 05_ad9605f2](https://github.com/user-attachments/assets/b198f351-f8e4-4001-b665-651f9ad45c77)
 
 ## MANUAL CALCULATION
+![WhatsApp Image 2025-11-20 at 18 03 24_42ff162c](https://github.com/user-attachments/assets/cf94c879-d04e-4f7e-9a4c-aced1e8dc090)
 
 ## RESULT
 Thus, the maximum range of a radar system using the Radar Range Equation is verified through a Scilab program.
